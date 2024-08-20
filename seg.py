@@ -114,7 +114,6 @@ def exibir_formulario():
         # Botão para adicionar todos os cursos
         if st.button("Adicionar todos os cursos"):
             st.session_state['cursos_selecionados'] = cursos_disponiveis
-            st.experimental_rerun()  # Atualiza a página para refletir as mudanças
 
     if st.button("Cadastrar"):
         if not nome or not email or (tipo == "Treinador" and not st.session_state['cursos_selecionados']) or (tipo == "Bravo" and not numero):
